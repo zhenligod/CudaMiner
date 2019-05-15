@@ -135,7 +135,7 @@ am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
 ACLOCAL = ${SHELL} /home/buchner/CudaMiner/missing --run aclocal-1.11
-ALLOCA = 
+ALLOCA =
 AMTAR = $${TAR-tar}
 AUTOCONF = ${SHELL} /home/buchner/CudaMiner/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/buchner/CudaMiner/missing --run autoheader
@@ -148,7 +148,7 @@ CCASFLAGS = -g -O2
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -std=gnu99 -E
-CPPFLAGS = 
+CPPFLAGS =
 CUDA_CFLAGS = -I/usr/local/cuda/include
 CUDA_LDFLAGS = -L/usr/local/cuda/lib64
 CUDA_LIBS = -lcudart
@@ -158,11 +158,11 @@ CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-ECHO_C = 
+ECHO_C =
 ECHO_N = -n
-ECHO_T = 
+ECHO_T =
 EGREP = /bin/grep -E
-EXEEXT = 
+EXEEXT =
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
@@ -170,12 +170,12 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 JANSSON_LIBS = compat/jansson/libjansson.a
-LDFLAGS = 
+LDFLAGS =
 LIBCURL = -L/usr/lib/x86_64-linux-gnu -lcurl -Wl,-Bsymbolic-functions -Wl,-z,relro
-LIBCURL_CPPFLAGS = 
-LIBOBJS = 
-LIBS = 
-LTLIBOBJS = 
+LIBCURL_CPPFLAGS =
+LIBOBJS =
+LIBS =
+LTLIBOBJS =
 MAINT = #
 MAKEINFO = ${SHELL} /home/buchner/CudaMiner/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
@@ -183,22 +183,22 @@ NVCC = nvcc
 OBJEXT = o
 OPENMP_CFLAGS = -fopenmp
 PACKAGE = cudaminer
-PACKAGE_BUGREPORT = 
+PACKAGE_BUGREPORT =
 PACKAGE_NAME = cudaminer
 PACKAGE_STRING = cudaminer 2014.02.02
 PACKAGE_TARNAME = cudaminer
-PACKAGE_URL = 
+PACKAGE_URL =
 PACKAGE_VERSION = 2014.02.02
 PATH_SEPARATOR = :
 PTHREAD_FLAGS = -pthread
 PTHREAD_LIBS = -lpthread
 RANLIB = ranlib
-SET_MAKE = 
+SET_MAKE =
 SHELL = /bin/bash
-STRIP = 
+STRIP =
 VERSION = 2014.02.02
-WS2_LIBS = 
-_libcurl_config = 
+WS2_LIBS =
+_libcurl_config =
 abs_builddir = /home/buchner/CudaMiner
 abs_srcdir = /home/buchner/CudaMiner
 abs_top_builddir = /home/buchner/CudaMiner
@@ -207,12 +207,12 @@ ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
 am__leading_dot = .
-am__quote = 
+am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
 build = x86_64-unknown-linux-gnu
-build_alias = 
+build_alias =
 build_cpu = x86_64
 build_os = linux-gnu
 build_vendor = unknown
@@ -223,7 +223,7 @@ docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
 host = x86_64-unknown-linux-gnu
-host_alias = 
+host_alias =
 host_cpu = x86_64
 host_os = linux-gnu
 host_vendor = unknown
@@ -247,14 +247,14 @@ sharedstatedir = ${prefix}/com
 srcdir = .
 sysconfdir = ${prefix}/etc
 target = x86_64-unknown-linux-gnu
-target_alias = 
+target_alias =
 target_cpu = x86_64
 target_os = linux-gnu
 target_vendor = unknown
-top_build_prefix = 
+top_build_prefix =
 top_builddir = .
 top_srcdir = .
-#JANSSON_INCLUDES = 
+#JANSSON_INCLUDES =
 JANSSON_INCLUDES = -I$(top_srcdir)/compat/jansson
 EXTRA_DIST = autogen.sh README.txt LICENSE.txt \
 			  cudaminer.sln cudaminer.vcxproj cudaminer.vcxproj.filters \
@@ -279,7 +279,7 @@ cudaminer_SOURCES = elist.h miner.h compat.h \
 			  titan_kernel.cu titan_kernel.h
 
 cudaminer_LDFLAGS = $(PTHREAD_FLAGS) -L/usr/local/cuda/lib64
-cudaminer_LDADD = -L/usr/lib/x86_64-linux-gnu -lcurl -Wl,-Bsymbolic-functions -Wl,-z,relro compat/jansson/libjansson.a -lpthread  -lcudart -fopenmp 
+cudaminer_LDADD = -L/usr/lib/x86_64-linux-gnu -lcurl -Wl,-Bsymbolic-functions -Wl,-z,relro compat/jansson/libjansson.a -lpthread  -lcudart -fopenmp
 cudaminer_CPPFLAGS = -msse2  -fopenmp $(PTHREAD_FLAGS) -fno-strict-aliasing $(JANSSON_INCLUDES) -DSCRYPT_KECCAK512 -DSCRYPT_CHACHA -DSCRYPT_CHOOSE_COMPILETIME
 all: cpuminer-config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
@@ -328,7 +328,7 @@ cpuminer-config.h: stamp-h1
 stamp-h1: $(srcdir)/cpuminer-config.h.in $(top_builddir)/config.status
 	@rm -f stamp-h1
 	cd $(top_builddir) && $(SHELL) ./config.status cpuminer-config.h
-$(srcdir)/cpuminer-config.h.in: # $(am__configure_deps) 
+$(srcdir)/cpuminer-config.h.in: # $(am__configure_deps)
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f stamp-h1
 	touch $@
@@ -372,7 +372,7 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-cudaminer$(EXEEXT): $(cudaminer_OBJECTS) $(cudaminer_DEPENDENCIES) $(EXTRA_cudaminer_DEPENDENCIES) 
+cudaminer$(EXEEXT): $(cudaminer_OBJECTS) $(cudaminer_DEPENDENCIES) $(EXTRA_cudaminer_DEPENDENCIES)
 	@rm -f cudaminer$(EXEEXT)
 	$(cudaminer_LINK) $(cudaminer_OBJECTS) $(cudaminer_LDADD) $(LIBS)
 
